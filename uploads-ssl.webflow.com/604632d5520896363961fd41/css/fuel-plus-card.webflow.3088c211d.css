@@ -407,7 +407,7 @@ a {
   position: absolute;
   left: auto;
   top: 29vh;
-  right: 91.8vh;
+  right: 69.1vh;
   bottom: auto;
   height: 9.8vh;
 }
@@ -489,7 +489,7 @@ a {
 .truck {
   position: relative;
   height: 40vh;
-  background-image: url("../truck.png");
+  background-image: url("../truck2.png");
   background-position: 100% 50%;
   background-size: auto 40vh;
   background-repeat: no-repeat;
@@ -1856,7 +1856,7 @@ a {
 
 @media screen and (min-width: 1920px) {
   h1 {
-    font-size: 9.2em;
+    font-size: 6.8em;
   }
 
   h2 {
@@ -3036,7 +3036,7 @@ a {
 
   .wheel---back---1 {
     top: 7.8vh;
-    right: 23.1vh;
+    right: 17.3vh;
     height: 2.3vh;
   }
 
