@@ -166,7 +166,7 @@
           loading="lazy" alt="" class="wheel---back---1" />
       </div><a data-w-id="bba0364b-274f-8341-6d22-c2aec2407005"
         style="opacity:0;-webkit-transform:translate3d(0, 4vh, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 4vh, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 4vh, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 4vh, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-        href="#" class="btn-main absolute w-button" style="color: #fff;">HAUL WITH US</a>
+        href="#" class="btn-main absolute w-button" style="color: #fff !important;">HAUL WITH US</a>
       <div class="panorama-img-sec1-img-parent"><img
           src="./uploads-ssl.webflow.com/604632d5520896363961fd41/604632d55208964d1161fd5e_mobile-panorama-img.jpg"
           loading="lazy" sizes="100vw"
@@ -266,6 +266,43 @@ and shipments
     </div>
   </div>
   
+  <!-- Reviews Carousel Section -->
+  <div class="section-reviews" style="background-color: #182b48; padding: 80px 20px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="color: #fff; font-size: 48px; text-align: center; margin-bottom: 20px; font-family: 'Teko', sans-serif; font-weight: 500;">
+        WHAT OUR CLIENTS SAY
+      </h2>
+      <div style="color: #fff; font-size: 18px; text-align: center; margin-bottom: 50px; font-family: 'Bai Jamjuree', sans-serif; opacity: 0.9;">
+        Real feedback from real clients
+      </div>
+      
+      <div class="carousel-container" style="position: relative; overflow: hidden; padding: 0 60px;">
+        <button class="carousel-btn carousel-prev" style="padding-bottom: 5px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #bf1b18; color: #fff; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; z-index: 10; transition: background-color 0.3s; display: flex; align-items: center; justify-content: center;"
+          onmouseover="this.style.backgroundColor='#8a1412'" 
+          onmouseout="this.style.backgroundColor='#bf1b18'">
+          ‹
+        </button>
+        
+        <div class="carousel-track" style="display: flex; transition: transform 0.5s ease;">
+          <!-- Reviews will be loaded here dynamically -->
+          <div style="min-width: 100%; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+            <p style="color: #fff; font-size: 18px; font-family: 'Bai Jamjuree', sans-serif;">Loading reviews...</p>
+          </div>
+        </div>
+        
+        <button class="carousel-btn carousel-next" style="padding-bottom: 5px; position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: #bf1b18; color: #fff; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; z-index: 10; transition: background-color 0.3s; display: flex; align-items: center; justify-content: center;"
+          onmouseover="this.style.backgroundColor='#8a1412'" 
+          onmouseout="this.style.backgroundColor='#bf1b18'">
+          ›
+        </button>
+      </div>
+      
+      <div class="carousel-dots" style="display: flex; justify-content: center; gap: 10px; margin-top: 30px;">
+        <!-- Dots will be generated dynamically -->
+      </div>
+    </div>
+  </div>
+  
   <!-- Feedback Section -->
   <div class="section-feedback" style="background-color: #f5f5f5; padding: 80px 20px;">
     <div style="max-width: 800px; margin: 0 auto;">
@@ -289,6 +326,17 @@ and shipments
               placeholder="your.email@company.com" />
           </div>
           
+          <div>
+            <label style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
+              Your Name *
+            </label>
+            <input type="text" name="feedback-name" required 
+              style="width: 100%; padding: 12px 16px; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; border: 2px solid #ddd; border-radius: 4px; box-sizing: border-box; transition: border-color 0.3s;"
+              onfocus="this.style.borderColor='#bf1b18'" 
+              onblur="this.style.borderColor='#ddd'"
+              placeholder="Your Name" />
+          </div>
+
           <div>
             <label style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
               Company Name *
@@ -387,23 +435,54 @@ and shipments
         return;
       }
       
-      // Simulate form submission
       const successMsg = document.getElementById('feedback-success');
       const errorMsg = document.getElementById('feedback-error');
+      const form = this;
       
-      // Show success message
-      successMsg.style.display = 'block';
-      errorMsg.style.display = 'none';
+      // Prepare form data
+      const formData = new FormData();
+      formData.append('email', form.querySelector('[name="feedback-email"]').value);
+      formData.append('name', form.querySelector('[name="feedback-name"]').value);
+      formData.append('company_name', form.querySelector('[name="feedback-company"]').value);
+      formData.append('rating', ratingInput.value);
+      formData.append('comment', form.querySelector('[name="feedback-comment"]').value);
       
-      // Reset form
-      this.reset();
-      selectedRating = 0;
-      updateStars(0);
-      
-      // Hide success message after 5 seconds
-      setTimeout(() => {
+      // Submit to PHP backend
+      fetch('save_feedback.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          // Show success message
+          successMsg.textContent = data.message;
+          successMsg.style.display = 'block';
+          errorMsg.style.display = 'none';
+          
+          // Reset form
+          form.reset();
+          selectedRating = 0;
+          updateStars(0);
+          
+          // Hide success message after 7 seconds
+          setTimeout(() => {
+            successMsg.style.display = 'none';
+          }, 7000);
+        } else {
+          // Show error message
+          errorMsg.textContent = data.message;
+          errorMsg.style.display = 'block';
+          successMsg.style.display = 'none';
+        }
+      })
+      .catch(error => {
+        // Show error message
+        errorMsg.textContent = 'Oops! Something went wrong. Please try again.';
+        errorMsg.style.display = 'block';
         successMsg.style.display = 'none';
-      }, 5000);
+        console.error('Error:', error);
+      });
     });
   </script>
   
@@ -415,20 +494,16 @@ and shipments
         <p class="txt-color-white-2 p-footer">ALT CARRIER 2025. ALL RIGHTS RESERVED.</p>
       </div>
       <ul id="w-node-c372de09-8b9d-2a04-5d70-83fa04ebd7cf-1161fd42" role="list" class="footer-list w-list-unstyled">
-        <li class="footer-list-item"><img
-            src="./uploads-ssl.webflow.com/604632d5520896363961fd41/604632d5520896f1b861fd5a_Group%205.svg"
-            loading="lazy" width="24" alt="" class="footer-icon" /><a href="tel:+12075012238"
-            class="txt-color-white-2 footer-mail">+1 207 501 22 38</a></li>
-        <li class="footer-list-item adress"><img
-            src="./uploads-ssl.webflow.com/604632d5520896363961fd41/604632d55208967f6161fd5c_Fill%205.svg"
-            loading="lazy" width="18" alt="" class="footer-icon" />
+        <li class="footer-list-item">
+          <a href="tel:+12075012238" class="txt-color-white-2 footer-mail">+1 207 501 22 38</a>
+        </li>
+        <li class="footer-list-item adress">
           <p class="txt-color-white-2 p-footer">ALT CARRIER | Dispatch Department<BR>
             408 Northeast RD, Standish, ME, 04084, USA</p>
         </li>
-        <li class="footer-list-item"><img
-            src="./uploads-ssl.webflow.com/604632d5520896363961fd41/604632d5520896569c61fd5b_Group%204.svg"
-            loading="lazy" width="24" alt="" class="footer-icon" /><a href="#"
-            class="txt-color-white-2 footer-mail">info@altcarriers.org</a></li>
+        <li class="footer-list-item">
+          <a href="mailto:info@altcarriers.org" class="txt-color-white-2 footer-mail">info@altcarriers.org</a>
+        </li>
       </ul>
     </div>
   </footer>
@@ -437,6 +512,130 @@ and shipments
     crossorigin="anonymous"></script>
   <script src="./uploads-ssl.webflow.com/604632d5520896363961fd41/js/webflow.7c24d6817.js"
     type="text/javascript"></script>
+  
+  <script>
+    // Reviews Carousel
+    let currentReviewIndex = 0;
+    let reviews = [];
+    
+    // Fetch reviews from database
+    fetch('get_reviews.php?limit=20')
+      .then(response => response.json())
+      .then(data => {
+        if (data.success && data.reviews.length > 0) {
+          reviews = data.reviews;
+          renderReviews();
+          renderDots();
+          startAutoSlide();
+        } else {
+          document.querySelector('.carousel-track').innerHTML = `
+            <div style="min-width: 100%; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+              <p style="color: #fff; font-size: 18px; font-family: 'Bai Jamjuree', sans-serif;">No reviews yet. Be the first to share your feedback!</p>
+            </div>
+          `;
+        }
+      })
+      .catch(error => {
+        console.error('Error loading reviews:', error);
+        document.querySelector('.carousel-track').innerHTML = `
+          <div style="min-width: 100%; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+            <p style="color: #fff; font-size: 18px; font-family: 'Bai Jamjuree', sans-serif;">Unable to load reviews at this time.</p>
+          </div>
+        `;
+      });
+    
+    function renderReviews() {
+      const track = document.querySelector('.carousel-track');
+      track.innerHTML = reviews.map((review, index) => `
+        <div class="review-slide" style="min-width: 100%; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+          <div style="background-color: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); max-width: 700px; width: 100%;">
+            <div style="display: flex; justify-content: center; margin-bottom: 20px; font-size: 24px; color: #bf1b18;">
+              ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}
+            </div>
+            <p style="color: #333; font-size: 18px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6; margin-bottom: 25px; font-style: italic;">
+              "${review.comment}"
+            </p>
+            <div style="border-top: 2px solid #f0f0f0; padding-top: 20px;">
+              <h4 style="color: #182b48; font-size: 22px; font-family: 'Teko', sans-serif; font-weight: 500; margin-bottom: 5px;">
+                ${review.name}
+              </h4>
+              ${review.company_name ? `
+                <p style="color: #bf1b18; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; margin-bottom: 5px;">
+                  ${review.company_name}
+                </p>
+              ` : ''}
+              <p style="color: #999; font-size: 14px; font-family: 'Bai Jamjuree', sans-serif;">
+                ${review.date}
+              </p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    function renderDots() {
+      const dotsContainer = document.querySelector('.carousel-dots');
+      dotsContainer.innerHTML = reviews.map((_, index) => `
+        <button class="carousel-dot ${index === 0 ? 'active' : ''}" 
+          data-index="${index}"
+          style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; background-color: ${index === 0 ? '#bf1b18' : 'transparent'}; cursor: pointer; transition: background-color 0.3s;">
+        </button>
+      `).join('');
+      
+      // Add click handlers to dots
+      document.querySelectorAll('.carousel-dot').forEach(dot => {
+        dot.addEventListener('click', function() {
+          currentReviewIndex = parseInt(this.getAttribute('data-index'));
+          updateCarousel();
+        });
+      });
+    }
+    
+    function updateCarousel() {
+      const track = document.querySelector('.carousel-track');
+      track.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
+      
+      // Update dots
+      document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+        if (index === currentReviewIndex) {
+          dot.style.backgroundColor = '#bf1b18';
+          dot.classList.add('active');
+        } else {
+          dot.style.backgroundColor = 'transparent';
+          dot.classList.remove('active');
+        }
+      });
+    }
+    
+    // Carousel navigation
+    document.querySelector('.carousel-prev').addEventListener('click', () => {
+      currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
+      updateCarousel();
+    });
+    
+    document.querySelector('.carousel-next').addEventListener('click', () => {
+      currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+      updateCarousel();
+    });
+    
+    // Auto-slide every 5 seconds
+    let autoSlideInterval;
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+        updateCarousel();
+      }, 5000);
+    }
+    
+    // Pause auto-slide on hover
+    document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+      clearInterval(autoSlideInterval);
+    });
+    
+    document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
+      startAutoSlide();
+    });
+  </script>
   
   <script>
     // Detect scroll position and change nav colors for light backgrounds
