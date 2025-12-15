@@ -4,6 +4,17 @@
   data-wf-status="1">
 
 <head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KHVR632E4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6KHVR632E4');
+  </script>
+
   <meta charset="utf-8" />
   <title>ALT CARRIERS</title>
   <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -32,29 +43,71 @@
     .nav-parent {
       transition: background-color 0.3s ease;
     }
-    
+
     .txt-color-light-green,
     .txt-color-white,
     .btn-main {
       transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
     }
-    
+
     .phone-img-wrapp img {
       transition: filter 0.3s ease;
     }
-    
+
     /* Dark text for light backgrounds */
     .nav-bar.light-bg .txt-color-light-green,
     .nav-bar.light-bg .txt-color-white {
       color: #182b48 !important;
     }
-    
+
     .nav-bar.light-bg .menu-bar-2 {
       background-color: #182b48;
     }
-    
+
     .nav-bar.light-bg .phone-img-wrapp img {
       filter: brightness(0) saturate(100%) invert(15%) sepia(25%) saturate(1500%) hue-rotate(180deg) brightness(95%) contrast(95%);
+    }
+
+    /* Footer text fixes */
+    .txt-color-white-2 {
+      color: #ffffff !important;
+    }
+
+    .txt-color-white-2.p-footer {
+      color: #ffffff !important;
+    }
+
+    .txt-color-white-2.footer-mail {
+      color: #ffffff !important;
+    }
+
+    /* Mobile fixes */
+    @media screen and (max-width: 991px) {
+      .btn-main {
+        color: #fff !important;
+      }
+
+      .txt-color-white-2.p-footer {
+        font-size: 1.2em !important;
+      }
+
+      .txt-color-white-2.footer-mail {
+        font-size: 1.5em !important;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .btn-main {
+        color: #fff !important;
+      }
+
+      .txt-color-white-2.p-footer {
+        font-size: 1.2em !important;
+      }
+
+      .txt-color-white-2.footer-mail {
+        font-size: 1.5em !important;
+      }
     }
   </style>
 </head>
@@ -96,24 +149,23 @@
   </div>
   <div id="application-form" style="display:none" class="pop-up-card-apply">
     <div class="apply-popup-card color-dark-green shadow" style="position: relative;">
-      <div data-w-id="36863d19-a16f-8995-def2-fdc03bfc4b63" class="close-btn" style="position: absolute; top: 10px; right: 10px; cursor: pointer; z-index: 100; display: flex; align-items: center; justify-content: center; font-size: 48px; color: #000; font-weight: 300; transition: transform 0.2s ease, color 0.2s ease; width: 50px; height: 50px;" 
-           onmouseover="this.style.transform='scale(1.1) rotate(90deg)'; this.style.color='#bf1b18';" 
-           onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.color='#000';">
+      <div data-w-id="36863d19-a16f-8995-def2-fdc03bfc4b63" class="close-btn"
+        style="position: absolute; top: 10px; right: 10px; cursor: pointer; z-index: 100; display: flex; align-items: center; justify-content: center; font-size: 48px; color: #000; font-weight: 300; transition: transform 0.2s ease, color 0.2s ease; width: 50px; height: 50px;"
+        onmouseover="this.style.transform='scale(1.1) rotate(90deg)'; this.style.color='#bf1b18';"
+        onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.color='#000';">
         ×
       </div>
       <h1 class="pop-up-headline txt-color-light-green txt-allign-central">Haul With Us</h1>
       <div id="card-application-form" class="form-block w-form">
         <form id="wf-form-Email-Form" name="wf-form-Email-Form" data-name="Email Form" class="form-2">
-          <input type="text"
-            class="form-field w-input" maxlength="256" name="company-name" data-name="Company Name"
+          <input type="text" class="form-field w-input" maxlength="256" name="company-name" data-name="Company Name"
             placeholder="Company Name" id="company-name" required="" />
-          <input type="text"
-            class="form-field w-input" maxlength="256" name="person-name" data-name="Person Name" 
+          <input type="text" class="form-field w-input" maxlength="256" name="person-name" data-name="Person Name"
             placeholder="Person Name" id="person-name" required="" />
-          <input type="email" class="form-field w-input" maxlength="256" name="email"
-            data-name="Email" placeholder="Email" id="email" required="" />
-          <input type="submit" value="Submit"
-            data-wait="Please wait..." class="btn-main form w-button" style="color: #fff !important;" />
+          <input type="email" class="form-field w-input" maxlength="256" name="email" data-name="Email"
+            placeholder="Email" id="email" required="" />
+          <input type="submit" value="Submit" data-wait="Please wait..." class="btn-main form w-button"
+            style="color: #fff !important;" />
         </form>
         <div class="success-message w-form-done">
           <div class="succes-txt">Thank you! Your submission has been received!</div>
@@ -159,8 +211,8 @@
       <h1 data-w-id="Heading 3"
         style="opacity:0;-webkit-transform:translate3d(0, 15vh, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 15vh, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 15vh, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 15vh, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
         class="absolute txt-color-white txt-allign-central hero-size max-w-80 txt-shadow">
-        Driven by <span class="txt-color-dark-green">Precision</span> <br> Powered by <span
-          class="txt-color-dark-green" style="color: #bf1b18;">People
+        Driven by <span class="txt-color-dark-green">Precision</span> <br> Powered by <span class="txt-color-dark-green"
+          style="color: #bf1b18;">People
       </h1>
       <div data-w-id="cd9a2aff-587d-10ec-37c2-022537d0916c"
         style="-webkit-transform:translate3d(100vh, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(100vh, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(100vh, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(100vh, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
@@ -181,91 +233,112 @@
     </div>
   </div>
 
-  
-  
+
+
   <!-- About Section -->
   <div class="section-about" style="background-color: #f5f5f5; padding: 80px 20px;">
     <div style="max-width: 1200px; margin: 0 auto;">
-      <h2 style="color: #bf1b18; font-size: 48px; text-align: center; margin-bottom: 30px; font-family: 'Teko', sans-serif; font-weight: 500;">
+      <h2
+        style="color: #bf1b18; font-size: 48px; text-align: center; margin-bottom: 30px; font-family: 'Teko', sans-serif; font-weight: 500;">
         Start Working with ALT Carrier
       </h2>
-      <div style="color: #333; font-size: 20px; text-align: center; margin-bottom: 50px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6;">
+      <div
+        style="color: #333; font-size: 20px; text-align: center; margin-bottom: 50px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6;">
         Since 2019, ALT Carrier has delivered freight with speed, precision, and no excuses.<br>
         From customs clearance to live 24/7 tracking - we handle the details so you don't have to.
       </div>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px;">
-        <div style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">24/7 Tracking and Dispatch</h3>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px;">
+        <div
+          style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">24/7
+            Tracking and Dispatch</h3>
           <p style="color: #666; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5;">
             Real-time updates and constant driver communication
           </p>
         </div>
-        
-        <div style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">Competitive rates</h3>
+
+        <div
+          style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">Competitive
+            rates</h3>
           <p style="color: #666; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5;">
             Fair pricing secured through aggressive negotiation
           </p>
         </div>
-        
-        <div style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">US Citizen drivers</h3>
+
+        <div
+          style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">US Citizen
+            drivers</h3>
           <p style="color: #666; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5;">
             Experienced drivers with full compliance
           </p>
         </div>
-        
-        <div style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">TWIC drivers</h3>
+
+        <div
+          style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">TWIC
+            drivers</h3>
           <p style="color: #666; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5;">
             Drivers cleared for secure port and
-maritime facilities
+            maritime facilities
           </p>
         </div>
-        
-        <div style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">Solo and team capacity</h3>
+
+        <div
+          style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">Solo and
+            team capacity</h3>
           <p style="color: #666; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5;">
             Fast delivery - up to 1000 miles per day
-across. US and Canada
+            across. US and Canada
           </p>
         </div>
-        
-        <div style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">Quick set up</h3>
+
+        <div
+          style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">Quick set
+            up</h3>
           <p style="color: #666; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5;">
             Same day onboarding and factoring
-friendly paperwork
+            friendly paperwork
           </p>
         </div>
-        
-        <div style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">Cross border expertise</h3>
+
+        <div
+          style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">Cross
+            border expertise</h3>
           <p style="color: #666; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5;">
             Seamless US and Canada operations
-with full customs clearance and
-compliance support
+            with full customs clearance and
+            compliance support
           </p>
         </div>
-        
-        <div style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">TSA Approved</h3>
+
+        <div
+          style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">TSA
+            Approved</h3>
           <p style="color: #666; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5;">
             Access to airports and secure cargo
-areas with no delays
+            areas with no delays
           </p>
         </div>
-        
-        <div style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">Hazmat endorced</h3>
+
+        <div
+          style="background-color: #fff; padding: 30px; border-radius: 8px; border-left: 4px solid #182b48; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="color: #182b48; font-size: 24px; margin-bottom: 15px; font-family: 'Teko', sans-serif;">Hazmat
+            endorced</h3>
           <p style="color: #666; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5;">
             Qualified drivers for hazardous materials
-and shipments
+            and shipments
           </p>
         </div>
       </div>
-      
+
       <div style="text-align: center;">
         <h3 style="color: #333; font-size: 36px; font-family: 'Teko', sans-serif; font-weight: 500;">
           Haul smarter. Haul with <span style="color: #bf1b18;">ALT</span><span style="color: #182b48;">.</span>
@@ -273,105 +346,136 @@ and shipments
       </div>
     </div>
   </div>
-  
+
   <!-- Fleet & Equipment Section -->
   <div class="section-fleet" style="background-color: #f5f5f5; padding: 80px 20px;">
     <div style="max-width: 1200px; margin: 0 auto;">
       <div style="text-align: center; margin-bottom: 60px;">
-        <h6 style="color: #bf1b18; font-size: 16px; text-align: center; margin-bottom: 15px; font-family: 'Teko', sans-serif; font-weight: 500; letter-spacing: 2px; text-transform: uppercase;">
+        <h6
+          style="color: #bf1b18; font-size: 16px; text-align: center; margin-bottom: 15px; font-family: 'Teko', sans-serif; font-weight: 500; letter-spacing: 2px; text-transform: uppercase;">
           FLEET & EQUIPMENT
         </h6>
-        <h2 style="color: #182b48; font-size: 48px; text-align: center; margin-bottom: 20px; font-family: 'Teko', sans-serif; font-weight: 500;">
+        <h2
+          style="color: #182b48; font-size: 48px; text-align: center; margin-bottom: 20px; font-family: 'Teko', sans-serif; font-weight: 500;">
           Equipment we operate
         </h2>
-        <p style="color: #666; font-size: 18px; text-align: center; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto;">
+        <p
+          style="color: #666; font-size: 18px; text-align: center; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto;">
           Our fleet is optimized for expedited, cross-border, and regional transportation across the U.S.–<br>
-          Canada corridor. We specialize in <strong style="color: #182b48;">Small Straight</strong>, <strong style="color: #182b48;">Large Straight</strong>, and <strong style="color: #182b48;">Sprinter Van</strong> units.
+          Canada corridor. We specialize in <strong style="color: #182b48;">Small Straight</strong>, <strong
+            style="color: #182b48;">Large Straight</strong>, and <strong style="color: #182b48;">Sprinter Van</strong>
+          units.
         </p>
       </div>
-      
+
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
         <!-- Small Straight Trucks Card -->
-        <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 2px solid #e0e0e0; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+        <div
+          style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 2px solid #e0e0e0; transition: transform 0.3s ease, box-shadow 0.3s ease;"
           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.15)';"
           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.1)';">
-          
-          <div style="background: linear-gradient(135deg, #4a9eff 0%, #6bb3ff 100%); height: 180px; display: flex; align-items: center; justify-content: center; font-family: 'Teko', sans-serif; font-size: 20px; color: #fff; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;">
-            <img src="./res/ford_transit.png" alt="Small Straight Truck" style="object-fit: cover; height: 180px; width: 100%;" />
+
+          <div
+            style="background: linear-gradient(135deg, #4a9eff 0%, #6bb3ff 100%); height: 180px; display: flex; align-items: center; justify-content: center; font-family: 'Teko', sans-serif; font-size: 20px; color: #fff; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;">
+            <img src="./res/ford_transit.png" alt="Small Straight Truck"
+              style="object-fit: cover; height: 180px; width: 100%;" />
           </div>
-          
+
           <div style="padding: 30px;">
-            <h3 style="color: #182b48; font-size: 28px; font-family: 'Teko', sans-serif; font-weight: 500; margin-bottom: 10px;">
+            <h3
+              style="color: #182b48; font-size: 28px; font-family: 'Teko', sans-serif; font-weight: 500; margin-bottom: 10px;">
               Small Straight Trucks
             </h3>
-            <h5 style="color: #bf1b18; font-size: 14px; font-family: 'Teko', sans-serif; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;">
+            <h5
+              style="color: #bf1b18; font-size: 14px; font-family: 'Teko', sans-serif; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;">
               UNDER 12,000 LBS GVW · NON-CDL
             </h5>
-            
-            <p style="color: #333; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6; margin-bottom: 20px;">
-              Compact, agile box trucks engineered for **pure expedite freight only**. We do not run partials or multi-load operations—each unit is dedicated to a single shipment for maximum speed, reliability, and control.
+
+            <p
+              style="color: #333; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6; margin-bottom: 20px;">
+              Compact, agile box trucks engineered for **pure expedite freight only**. We do not run partials or
+              multi-load operations—each unit is dedicated to a single shipment for maximum speed, reliability, and
+              control.
             </p>
-            
+
             <div style="border-top: 1px solid #e0e0e0; padding-top: 20px;">
-              <p style="color: #666; font-size: 14px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5; font-style: italic;">
+              <p
+                style="color: #666; font-size: 14px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5; font-style: italic;">
                 Typical use: LTL, retail distribution, cross-border middle-mile.
               </p>
             </div>
           </div>
         </div>
-        
+
         <!-- Large Straight Trucks Card -->
-        <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 2px solid #e0e0e0; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+        <div
+          style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 2px solid #e0e0e0; transition: transform 0.3s ease, box-shadow 0.3s ease;"
           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.15)';"
           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.1)';">
-          
-          <div style="background: linear-gradient(135deg, #2d5a8e 0%, #3d6a9e 100%); height: 180px; display: flex; align-items: center; justify-content: center; font-family: 'Teko', sans-serif; font-size: 20px; color: #fff; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;">
-            <img src="./res/box_truck.png" alt="Large Straight Truck" style="object-fit: cover; height: 180px; width: 100%;" />
+
+          <div
+            style="background: linear-gradient(135deg, #2d5a8e 0%, #3d6a9e 100%); height: 180px; display: flex; align-items: center; justify-content: center; font-family: 'Teko', sans-serif; font-size: 20px; color: #fff; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;">
+            <img src="./res/box_truck.png" alt="Large Straight Truck"
+              style="object-fit: cover; height: 180px; width: 100%;" />
           </div>
-          
+
           <div style="padding: 30px;">
-            <h3 style="color: #182b48; font-size: 28px; font-family: 'Teko', sans-serif; font-weight: 500; margin-bottom: 10px;">
+            <h3
+              style="color: #182b48; font-size: 28px; font-family: 'Teko', sans-serif; font-weight: 500; margin-bottom: 10px;">
               Large Straight Trucks
             </h3>
-            <h5 style="color: #bf1b18; font-size: 14px; font-family: 'Teko', sans-serif; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;">
+            <h5
+              style="color: #bf1b18; font-size: 14px; font-family: 'Teko', sans-serif; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;">
               HIGH-CAPACITY STRAIGHT UNITS
             </h5>
-            
-            <p style="color: #333; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6; margin-bottom: 20px;">
-              High-capacity straight trucks built for **true one-unit expedite operations**. No partials, no shared cargo – just dedicated hauls from pick-up to delivery with full 24/7 ELD visibility and strict safety & compliance.
+
+            <p
+              style="color: #333; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6; margin-bottom: 20px;">
+              High-capacity straight trucks built for **true one-unit expedite operations**. No partials, no shared
+              cargo – just dedicated hauls from pick-up to delivery with full 24/7 ELD visibility and strict safety &
+              compliance.
             </p>
-            
+
             <div style="border-top: 1px solid #e0e0e0; padding-top: 20px;">
-              <p style="color: #666; font-size: 14px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5; font-style: italic;">
+              <p
+                style="color: #666; font-size: 14px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5; font-style: italic;">
                 Typical use: mid-stop routes, commercial freight, time-sensitive LTL.
               </p>
             </div>
           </div>
         </div>
-        
+
         <!-- Sprinter Vans Card -->
-        <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 2px solid #e0e0e0; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+        <div
+          style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 2px solid #e0e0e0; transition: transform 0.3s ease, box-shadow 0.3s ease;"
           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.15)';"
           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.1)';">
-          
-          <div style="background: linear-gradient(135deg, #bf1b18 0%, #d92522 100%); height: 180px; display: flex; align-items: center; justify-content: center; font-family: 'Teko', sans-serif; font-size: 20px; color: #fff; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;">
-            <img src="./res/mb_sprinter.png" alt="Sprinter Van" style="object-fit: cover; height: 180px; width: 100%;" />
+
+          <div
+            style="background: linear-gradient(135deg, #bf1b18 0%, #d92522 100%); height: 180px; display: flex; align-items: center; justify-content: center; font-family: 'Teko', sans-serif; font-size: 20px; color: #fff; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;">
+            <img src="./res/mb_sprinter.png" alt="Sprinter Van"
+              style="object-fit: cover; height: 180px; width: 100%;" />
           </div>
-          
+
           <div style="padding: 30px;">
-            <h3 style="color: #182b48; font-size: 28px; font-family: 'Teko', sans-serif; font-weight: 500; margin-bottom: 10px;">
+            <h3
+              style="color: #182b48; font-size: 28px; font-family: 'Teko', sans-serif; font-weight: 500; margin-bottom: 10px;">
               Sprinter Vans
             </h3>
-            <h5 style="color: #bf1b18; font-size: 14px; font-family: 'Teko', sans-serif; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;">
+            <h5
+              style="color: #bf1b18; font-size: 14px; font-family: 'Teko', sans-serif; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;">
               HOT-SHOT & URGENT FREIGHT
             </h5>
-            
-            <p style="color: #333; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6; margin-bottom: 20px;">
-              Sprinter and cargo vans designed exclusively for **single-load expedite missions**. Fast pickup, rapid response, and dedicated capacity for time-critical freight — never combined or partial loads.
+
+            <p
+              style="color: #333; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.6; margin-bottom: 20px;">
+              Sprinter and cargo vans designed exclusively for **single-load expedite missions**. Fast pickup, rapid
+              response, and dedicated capacity for time-critical freight — never combined or partial loads.
             </p>
-            
+
             <div style="border-top: 1px solid #e0e0e0; padding-top: 20px;">
-              <p style="color: #666; font-size: 14px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5; font-style: italic;">
+              <p
+                style="color: #666; font-size: 14px; font-family: 'Bai Jamjuree', sans-serif; line-height: 1.5; font-style: italic;">
                 Typical use: dedicated capacity loads, airport & just-in-time freight.
               </p>
             </div>
@@ -380,91 +484,97 @@ and shipments
       </div>
     </div>
   </div>
-  
+
   <!-- Reviews Carousel Section -->
   <div class="section-reviews" style="background-color: #182b48; padding: 80px 20px;">
     <div style="max-width: 1200px; margin: 0 auto;">
-      <h2 style="color: #fff; font-size: 48px; text-align: center; margin-bottom: 20px; font-family: 'Teko', sans-serif; font-weight: 500;">
+      <h2
+        style="color: #fff; font-size: 48px; text-align: center; margin-bottom: 20px; font-family: 'Teko', sans-serif; font-weight: 500;">
         WHAT OUR CLIENTS SAY
       </h2>
-      <div style="color: #fff; font-size: 18px; text-align: center; margin-bottom: 50px; font-family: 'Bai Jamjuree', sans-serif; opacity: 0.9;">
+      <div
+        style="color: #fff; font-size: 18px; text-align: center; margin-bottom: 50px; font-family: 'Bai Jamjuree', sans-serif; opacity: 0.9;">
         Real feedback from real clients
       </div>
-      
+
       <div class="carousel-container" style="position: relative; overflow: hidden; padding: 0 60px;">
-        <button class="carousel-btn carousel-prev" style="padding-bottom: 5px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #bf1b18; color: #fff; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; z-index: 10; transition: background-color 0.3s; display: flex; align-items: center; justify-content: center;"
-          onmouseover="this.style.backgroundColor='#8a1412'" 
-          onmouseout="this.style.backgroundColor='#bf1b18'">
+        <button class="carousel-btn carousel-prev"
+          style="padding-bottom: 5px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #bf1b18; color: #fff; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; z-index: 10; transition: background-color 0.3s; display: flex; align-items: center; justify-content: center;"
+          onmouseover="this.style.backgroundColor='#8a1412'" onmouseout="this.style.backgroundColor='#bf1b18'">
           ‹
         </button>
-        
+
         <div class="carousel-track" style="display: flex; transition: transform 0.5s ease;">
           <!-- Reviews will be loaded here dynamically -->
-          <div style="min-width: 100%; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+          <div
+            style="min-width: 100%; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
             <p style="color: #fff; font-size: 18px; font-family: 'Bai Jamjuree', sans-serif;">Loading reviews...</p>
           </div>
         </div>
-        
-        <button class="carousel-btn carousel-next" style="padding-bottom: 5px; position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: #bf1b18; color: #fff; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; z-index: 10; transition: background-color 0.3s; display: flex; align-items: center; justify-content: center;"
-          onmouseover="this.style.backgroundColor='#8a1412'" 
-          onmouseout="this.style.backgroundColor='#bf1b18'">
+
+        <button class="carousel-btn carousel-next"
+          style="padding-bottom: 5px; position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: #bf1b18; color: #fff; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; z-index: 10; transition: background-color 0.3s; display: flex; align-items: center; justify-content: center;"
+          onmouseover="this.style.backgroundColor='#8a1412'" onmouseout="this.style.backgroundColor='#bf1b18'">
           ›
         </button>
       </div>
-      
+
       <div class="carousel-dots" style="display: flex; justify-content: center; gap: 10px; margin-top: 30px;">
         <!-- Dots will be generated dynamically -->
       </div>
     </div>
   </div>
-  
+
   <!-- Feedback Section -->
   <div class="section-feedback" style="background-color: #f5f5f5; padding: 80px 20px;">
     <div style="max-width: 800px; margin: 0 auto;">
-      <h2 style="color: #bf1b18; font-size: 48px; text-align: center; margin-bottom: 20px; font-family: 'Teko', sans-serif; font-weight: 500;">
+      <h2
+        style="color: #bf1b18; font-size: 48px; text-align: center; margin-bottom: 20px; font-family: 'Teko', sans-serif; font-weight: 500;">
         YOUR FEEDBACK MATTERS
       </h2>
-      <p style="color: #666; font-size: 18px; text-align: center; margin-bottom: 40px; font-family: 'Bai Jamjuree', sans-serif;">
+      <p
+        style="color: #666; font-size: 18px; text-align: center; margin-bottom: 40px; font-family: 'Bai Jamjuree', sans-serif;">
         Help us improve our service. Share your experience with ALT Carrier.
       </p>
-      
+
       <div style="background-color: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
         <form id="feedback-form" style="display: flex; flex-direction: column; gap: 20px;">
           <div>
-            <label style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
+            <label
+              style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
               Email *
             </label>
-            <input type="email" name="feedback-email" required 
+            <input type="email" name="feedback-email" required
               style="width: 100%; padding: 12px 16px; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; border: 2px solid #ddd; border-radius: 4px; box-sizing: border-box; transition: border-color 0.3s;"
-              onfocus="this.style.borderColor='#bf1b18'" 
-              onblur="this.style.borderColor='#ddd'"
+              onfocus="this.style.borderColor='#bf1b18'" onblur="this.style.borderColor='#ddd'"
               placeholder="your.email@company.com" />
           </div>
-          
+
           <div>
-            <label style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
+            <label
+              style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
               Your Name *
             </label>
-            <input type="text" name="feedback-name" required 
+            <input type="text" name="feedback-name" required
               style="width: 100%; padding: 12px 16px; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; border: 2px solid #ddd; border-radius: 4px; box-sizing: border-box; transition: border-color 0.3s;"
-              onfocus="this.style.borderColor='#bf1b18'" 
-              onblur="this.style.borderColor='#ddd'"
+              onfocus="this.style.borderColor='#bf1b18'" onblur="this.style.borderColor='#ddd'"
               placeholder="Your Name" />
           </div>
 
           <div>
-            <label style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
+            <label
+              style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
               Company Name *
             </label>
-            <input type="text" name="feedback-company" required 
+            <input type="text" name="feedback-company" required
               style="width: 100%; padding: 12px 16px; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; border: 2px solid #ddd; border-radius: 4px; box-sizing: border-box; transition: border-color 0.3s;"
-              onfocus="this.style.borderColor='#bf1b18'" 
-              onblur="this.style.borderColor='#ddd'"
+              onfocus="this.style.borderColor='#bf1b18'" onblur="this.style.borderColor='#ddd'"
               placeholder="Your Company Name" />
           </div>
-          
+
           <div>
-            <label style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
+            <label
+              style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
               Rating *
             </label>
             <div class="star-rating" style="display: flex; gap: 8px; font-size: 32px; cursor: pointer;">
@@ -476,60 +586,61 @@ and shipments
             </div>
             <input type="hidden" name="feedback-rating" id="feedback-rating" required />
           </div>
-          
+
           <div>
-            <label style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
+            <label
+              style="display: block; color: #182b48; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; font-weight: 500; margin-bottom: 8px;">
               Comment *
             </label>
             <textarea name="feedback-comment" required rows="5"
               style="width: 100%; padding: 12px 16px; font-size: 16px; font-family: 'Bai Jamjuree', sans-serif; border: 2px solid #ddd; border-radius: 4px; box-sizing: border-box; resize: vertical; transition: border-color 0.3s;"
-              onfocus="this.style.borderColor='#bf1b18'" 
-              onblur="this.style.borderColor='#ddd'"
+              onfocus="this.style.borderColor='#bf1b18'" onblur="this.style.borderColor='#ddd'"
               placeholder="Share your experience with us..."></textarea>
           </div>
-          
-          <button type="submit" 
+
+          <button type="submit"
             style="background-color: #bf1b18; color: #fff; padding: 16px 32px; font-size: 18px; font-family: 'Teko', sans-serif; font-weight: 500; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s; text-transform: uppercase; letter-spacing: 1px;"
-            onmouseover="this.style.backgroundColor='#182b48'" 
-            onmouseout="this.style.backgroundColor='#bf1b18'">
+            onmouseover="this.style.backgroundColor='#182b48'" onmouseout="this.style.backgroundColor='#bf1b18'">
             Submit Feedback
           </button>
         </form>
-        
-        <div id="feedback-success" style="display: none; background-color: #d4edda; color: #155724; padding: 16px; border-radius: 4px; margin-top: 20px; text-align: center; font-family: 'Bai Jamjuree', sans-serif;">
+
+        <div id="feedback-success"
+          style="display: none; background-color: #d4edda; color: #155724; padding: 16px; border-radius: 4px; margin-top: 20px; text-align: center; font-family: 'Bai Jamjuree', sans-serif;">
           Thank you for your feedback! We appreciate your input.
         </div>
-        
-        <div id="feedback-error" style="display: none; background-color: #f8d7da; color: #721c24; padding: 16px; border-radius: 4px; margin-top: 20px; text-align: center; font-family: 'Bai Jamjuree', sans-serif;">
+
+        <div id="feedback-error"
+          style="display: none; background-color: #f8d7da; color: #721c24; padding: 16px; border-radius: 4px; margin-top: 20px; text-align: center; font-family: 'Bai Jamjuree', sans-serif;">
           Oops! Something went wrong. Please try again.
         </div>
       </div>
     </div>
   </div>
-  
+
   <script>
     // Star rating functionality
     const stars = document.querySelectorAll('.star');
     const ratingInput = document.getElementById('feedback-rating');
     let selectedRating = 0;
-    
+
     stars.forEach(star => {
-      star.addEventListener('click', function() {
+      star.addEventListener('click', function () {
         selectedRating = parseInt(this.getAttribute('data-rating'));
         ratingInput.value = selectedRating;
         updateStars(selectedRating);
       });
-      
-      star.addEventListener('mouseover', function() {
+
+      star.addEventListener('mouseover', function () {
         const rating = parseInt(this.getAttribute('data-rating'));
         updateStars(rating);
       });
     });
-    
-    document.querySelector('.star-rating').addEventListener('mouseleave', function() {
+
+    document.querySelector('.star-rating').addEventListener('mouseleave', function () {
       updateStars(selectedRating);
     });
-    
+
     function updateStars(rating) {
       stars.forEach(star => {
         const starRating = parseInt(star.getAttribute('data-rating'));
@@ -540,20 +651,20 @@ and shipments
         }
       });
     }
-    
+
     // Form submission
-    document.getElementById('feedback-form').addEventListener('submit', function(e) {
+    document.getElementById('feedback-form').addEventListener('submit', function (e) {
       e.preventDefault();
-      
+
       if (!ratingInput.value) {
         alert('Please select a rating');
         return;
       }
-      
+
       const successMsg = document.getElementById('feedback-success');
       const errorMsg = document.getElementById('feedback-error');
       const form = this;
-      
+
       // Prepare form data
       const formData = new FormData();
       formData.append('email', form.querySelector('[name="feedback-email"]').value);
@@ -561,46 +672,46 @@ and shipments
       formData.append('company_name', form.querySelector('[name="feedback-company"]').value);
       formData.append('rating', ratingInput.value);
       formData.append('comment', form.querySelector('[name="feedback-comment"]').value);
-      
+
       // Submit to PHP backend
       fetch('save_feedback.php', {
         method: 'POST',
         body: formData
       })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          // Show success message
-          successMsg.textContent = data.message;
-          successMsg.style.display = 'block';
-          errorMsg.style.display = 'none';
-          
-          // Reset form
-          form.reset();
-          selectedRating = 0;
-          updateStars(0);
-          
-          // Hide success message after 7 seconds
-          setTimeout(() => {
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            // Show success message
+            successMsg.textContent = data.message;
+            successMsg.style.display = 'block';
+            errorMsg.style.display = 'none';
+
+            // Reset form
+            form.reset();
+            selectedRating = 0;
+            updateStars(0);
+
+            // Hide success message after 7 seconds
+            setTimeout(() => {
+              successMsg.style.display = 'none';
+            }, 7000);
+          } else {
+            // Show error message
+            errorMsg.textContent = data.message;
+            errorMsg.style.display = 'block';
             successMsg.style.display = 'none';
-          }, 7000);
-        } else {
+          }
+        })
+        .catch(error => {
           // Show error message
-          errorMsg.textContent = data.message;
+          errorMsg.textContent = 'Oops! Something went wrong. Please try again.';
           errorMsg.style.display = 'block';
           successMsg.style.display = 'none';
-        }
-      })
-      .catch(error => {
-        // Show error message
-        errorMsg.textContent = 'Oops! Something went wrong. Please try again.';
-        errorMsg.style.display = 'block';
-        successMsg.style.display = 'none';
-        console.error('Error:', error);
-      });
+          console.error('Error:', error);
+        });
     });
   </script>
-  
+
   <footer class="footer">
     <div class="w-layout-grid grid">
       <div class="footer-left-wrep"><a href="#" class="bottom-margin-2em w-inline-block"><img
@@ -609,14 +720,14 @@ and shipments
         <p class="txt-color-white-2 p-footer">ALT CARRIER 2025. ALL RIGHTS RESERVED.</p>
       </div>
       <ul id="w-node-c372de09-8b9d-2a04-5d70-83fa04ebd7cf-1161fd42" role="list" class="footer-list w-list-unstyled">
-        <li class="footer-list-item">
-          <a href="tel:+12075012238" class="txt-color-white-2 footer-mail">+1 207 501 22 38</a>
-        </li>
         <li class="footer-list-item adress">
-          <p class="txt-color-white-2 p-footer">ALT CARRIER | MC 1011410 USDOT 3227822<BR>
+          <p class="txt-color-white-2 p-footer">ALT CARRIER &#124; MC 1011410 USDOT 3227822<BR>
             408 Northeast RD, Standish, ME, 04084, USA</p>
         </li>
-        <li class="footer-list-item">
+        <li class="footer-list-item" style="padding-bottom: 5px;">
+          <a href="tel:+12075012238" class="txt-color-white-2 footer-mail">+1 207 501 22 38</a>
+        </li>
+        <li class="footer-list-item" style="padding-top: 0px;">
           <a href="mailto:info@altcarriers.org" class="txt-color-white-2 footer-mail">info@altcarriers.org</a>
         </li>
       </ul>
@@ -627,12 +738,12 @@ and shipments
     crossorigin="anonymous"></script>
   <script src="./uploads-ssl.webflow.com/604632d5520896363961fd41/js/webflow.7c24d6817.js"
     type="text/javascript"></script>
-  
+
   <script>
     // Handle "HAUL WITH US" button clicks - show modal
-    document.querySelectorAll('a[href="#"]').forEach(function(btn) {
+    document.querySelectorAll('a[href="#"]').forEach(function (btn) {
       if (btn.textContent.includes('HAUL WITH US')) {
-        btn.addEventListener('click', function(e) {
+        btn.addEventListener('click', function (e) {
           e.preventDefault();
           const modal = document.getElementById('application-form');
           modal.style.display = 'flex';
@@ -641,91 +752,91 @@ and shipments
         });
       }
     });
-    
+
     // Handle close button
     const closeBtn = document.querySelector('.close-btn');
     if (closeBtn) {
-      closeBtn.addEventListener('click', function(e) {
+      closeBtn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         document.getElementById('application-form').style.display = 'none';
       });
     }
-    
+
     // Close modal when clicking outside the form
-    document.getElementById('application-form').addEventListener('click', function(e) {
+    document.getElementById('application-form').addEventListener('click', function (e) {
       if (e.target === this) {
         this.style.display = 'none';
       }
     });
-    
+
     // Handle form submission
-    document.getElementById('wf-form-Email-Form').addEventListener('submit', function(e) {
+    document.getElementById('wf-form-Email-Form').addEventListener('submit', function (e) {
       e.preventDefault();
-      
+
       const form = this;
       const submitBtn = form.querySelector('input[type="submit"]');
       const originalBtnText = submitBtn.value;
       const successMsg = form.nextElementSibling;
       const errorMsg = successMsg.nextElementSibling;
-      
+
       // Disable submit button
       submitBtn.disabled = true;
       submitBtn.value = 'Please wait...';
-      
+
       // Prepare form data
       const formData = new FormData();
       formData.append('company_name', form.querySelector('[name="company-name"]').value);
       formData.append('person_name', form.querySelector('[name="person-name"]').value);
       formData.append('email', form.querySelector('[name="email"]').value);
-      
+
       // Submit to PHP backend
       fetch('save_offer.php', {
         method: 'POST',
         body: formData
       })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          // Show success message
-          successMsg.style.display = 'block';
-          errorMsg.style.display = 'none';
-          
-          // Reset form
-          form.reset();
-          
-          // Hide modal after 3 seconds
-          setTimeout(() => {
-            document.getElementById('application-form').style.display = 'none';
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            // Show success message
+            successMsg.style.display = 'block';
+            errorMsg.style.display = 'none';
+
+            // Reset form
+            form.reset();
+
+            // Hide modal after 3 seconds
+            setTimeout(() => {
+              document.getElementById('application-form').style.display = 'none';
+              successMsg.style.display = 'none';
+            }, 3000);
+          } else {
+            // Show error message
+            errorMsg.querySelector('.form-alert-massage').textContent = data.message;
+            errorMsg.style.display = 'block';
             successMsg.style.display = 'none';
-          }, 3000);
-        } else {
+          }
+        })
+        .catch(error => {
           // Show error message
-          errorMsg.querySelector('.form-alert-massage').textContent = data.message;
+          errorMsg.querySelector('.form-alert-massage').textContent = 'Oops! Something went wrong. Please try again.';
           errorMsg.style.display = 'block';
           successMsg.style.display = 'none';
-        }
-      })
-      .catch(error => {
-        // Show error message
-        errorMsg.querySelector('.form-alert-massage').textContent = 'Oops! Something went wrong. Please try again.';
-        errorMsg.style.display = 'block';
-        successMsg.style.display = 'none';
-        console.error('Error:', error);
-      })
-      .finally(() => {
-        // Re-enable submit button
-        submitBtn.disabled = false;
-        submitBtn.value = originalBtnText;
-      });
+          console.error('Error:', error);
+        })
+        .finally(() => {
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.value = originalBtnText;
+        });
     });
   </script>
-  
+
   <script>
     // Reviews Carousel
     let currentReviewIndex = 0;
     let reviews = [];
-    
+
     // Fetch reviews from database
     fetch('get_reviews.php?limit=20')
       .then(response => response.json())
@@ -751,7 +862,7 @@ and shipments
           </div>
         `;
       });
-    
+
     function renderReviews() {
       const track = document.querySelector('.carousel-track');
       track.innerHTML = reviews.map((review, index) => `
@@ -780,7 +891,7 @@ and shipments
         </div>
       `).join('');
     }
-    
+
     function renderDots() {
       const dotsContainer = document.querySelector('.carousel-dots');
       dotsContainer.innerHTML = reviews.map((_, index) => `
@@ -789,20 +900,20 @@ and shipments
           style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; background-color: ${index === 0 ? '#bf1b18' : 'transparent'}; cursor: pointer; transition: background-color 0.3s;">
         </button>
       `).join('');
-      
+
       // Add click handlers to dots
       document.querySelectorAll('.carousel-dot').forEach(dot => {
-        dot.addEventListener('click', function() {
+        dot.addEventListener('click', function () {
           currentReviewIndex = parseInt(this.getAttribute('data-index'));
           updateCarousel();
         });
       });
     }
-    
+
     function updateCarousel() {
       const track = document.querySelector('.carousel-track');
       track.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
-      
+
       // Update dots
       document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
         if (index === currentReviewIndex) {
@@ -814,18 +925,18 @@ and shipments
         }
       });
     }
-    
+
     // Carousel navigation
     document.querySelector('.carousel-prev').addEventListener('click', () => {
       currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
       updateCarousel();
     });
-    
+
     document.querySelector('.carousel-next').addEventListener('click', () => {
       currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
       updateCarousel();
     });
-    
+
     // Auto-slide every 5 seconds
     let autoSlideInterval;
     function startAutoSlide() {
@@ -834,30 +945,30 @@ and shipments
         updateCarousel();
       }, 5000);
     }
-    
+
     // Pause auto-slide on hover
     document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
       clearInterval(autoSlideInterval);
     });
-    
+
     document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
       startAutoSlide();
     });
   </script>
-  
+
   <script>
     // Detect scroll position and change nav colors for light backgrounds
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       const navbar = document.getElementById('nav-bar');
       const scrollPosition = window.scrollY;
-      
+
       // Get sections with light backgrounds
       const aboutSection = document.querySelector('.section-about');
       const fleetSection = document.querySelector('.section-fleet');
       const feedbackSection = document.querySelector('.section-feedback');
-      
+
       let isOverLight = false;
-      
+
       // Check if navbar overlaps with light sections
       if (aboutSection) {
         const aboutRect = aboutSection.getBoundingClientRect();
@@ -865,21 +976,21 @@ and shipments
           isOverLight = true;
         }
       }
-      
+
       if (fleetSection) {
         const fleetRect = fleetSection.getBoundingClientRect();
         if (fleetRect.top < 100 && fleetRect.bottom > 0) {
           isOverLight = true;
         }
       }
-      
+
       if (feedbackSection) {
         const feedbackRect = feedbackSection.getBoundingClientRect();
         if (feedbackRect.top < 100 && feedbackRect.bottom > 0) {
           isOverLight = true;
         }
       }
-      
+
       // Toggle light-bg class
       if (isOverLight) {
         navbar.classList.add('light-bg');
