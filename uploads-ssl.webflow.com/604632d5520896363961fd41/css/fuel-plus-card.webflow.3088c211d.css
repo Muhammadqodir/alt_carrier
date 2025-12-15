@@ -2109,6 +2109,7 @@ a {
     padding: 0.8em 1.8em;
     border-radius: 200px;
     font-size: 2em;
+    color: #fff !important;
   }
 
   .btn-main.margin-left-2em.margin-overide {

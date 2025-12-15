@@ -11,6 +11,6 @@ session_save_path($session_path);
 
 session_start();
 session_destroy();
-header('Location: /altcarrier/admin/login');
+header('Location: /admin/login');
 exit;
 ?>

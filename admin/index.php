@@ -13,15 +13,15 @@ session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    header('Location: /altcarrier/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 
 // Database configuration
 $host = 'localhost';
-$dbname = 'alfocusu_altcarrier';
-$username = 'alfocusu_altcarrier';
-$password = ']pd)4V&_4REr1Cc&';
+$dbname = 'altca762_db';
+$username = 'altca762_user';
+$password = 'AxQ!s5+*(ojKc1J;';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         $stmt->execute(['id' => $review_id]);
     }
     
-    header('Location: /altcarrier/admin');
+    header('Location: /admin');
     exit;
 }
 
@@ -122,6 +122,29 @@ foreach ($reviews as $review) {
         
         .logout-btn:hover {
             background-color: rgba(255,255,255,0.3);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .nav-links a.active {
+            background-color: rgba(255,255,255,0.2);
+            font-weight: 500;
         }
         
         .container {
@@ -315,7 +338,11 @@ foreach ($reviews as $review) {
 <body>
     <div class="header">
         <h1><span>ALT</span> Carrier <span>| Admin Panel</span></h1>
-        <a href="/altcarrier/admin/logout" class="logout-btn">Logout</a>
+        <div class="nav-links">
+            <a href="/admin" class="active">Reviews</a>
+            <a href="/admin/contacts.php">Customer Contacts</a>
+            <a href="/admin/logout" class="logout-btn">Logout</a>
+        </div>
     </div>
     
     <div class="container">

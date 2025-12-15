@@ -1,9 +1,9 @@
 <?php
 // Database configuration
 $host = 'localhost';
-$dbname = 'alfocusu_altcarrier';
-$username = 'alfocusu_altcarrier';
-$password = ']pd)4V&_4REr1Cc&';
+$dbname = 'altca762_db';
+$username = 'altca762_user';
+$password = 'AxQ!s5+*(ojKc1J;';
 
 // Set response header
 header('Content-Type: application/json');

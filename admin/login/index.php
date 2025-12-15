@@ -17,7 +17,7 @@ define('ADMIN_PASSWORD', '12345678'); // Use a strong password!
 
 // Check if already logged in
 if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
-    header('Location: /altcarrier/admin');
+    header('Location: /admin');
     exit;
 }
 
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($username === ADMIN_USERNAME && $password === ADMIN_PASSWORD) {
         $_SESSION['admin_logged_in'] = true;
         $_SESSION['admin_username'] = $username;
-        header('Location: /altcarrier/admin');
+        header('Location: /admin');
         exit;
     } else {
         $error = 'Invalid username or password';
